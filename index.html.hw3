@@ -1,0 +1,18 @@
+<style>
+body{
+    border:red solid 5px;
+}
+
+</style>
+
+
+<body>
+<head>
+<h1> Favorite Foods </h1>
+</head>
+<ul>
+<li> Pho </li>
+<li> Steak </li>
+<li> Seafood Boil </li>
+</ul>
+</body>
