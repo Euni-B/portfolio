@@ -1,11 +1,11 @@
-
+console.log("js connected")
 
 function loginHandler(){
 
- const nameInput= document.getElementById("name-input")
-const emailInput=document.getElementById("email-input")
+ const nameInput= document.getElementById("name-input");
+const emailInput=document.getElementById("email-input");
  console.log("Your name is" + nameInput.value);
- console.log( "Your email is" + emailInput.value )
+ console.log( "Your email is" + emailInput.value );
 }
 
 
