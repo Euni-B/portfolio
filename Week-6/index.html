@@ -6,9 +6,9 @@
     <title>My Website</title>
 
     <!-- Link to CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body>                                 
 
     <header>
         <h1>Welcome to My Website</h1>
@@ -23,6 +23,25 @@
     </footer>
 
     <!-- Link to JavaScript -->
-    <script src="script.js"></script>
+ 
+    
+<section>
+<label class="name-label"> Name</label>
+<input id="name-input" type="text" placeholder="enter name"/>
+<br/>
+<label class="name-label"> Email</label>
+<input id= "email-input" type="text" placeholder="enter email"/>
+<br/>
+<button onclick="loginHandler()"> Login</button>
+
+<script src="index.js"></script>
+
+</section>
+
+<section>
+    <p id="change-text">Hello I am text</p>
+    <button onclick="changeText">Change Text</button>
+    <button onclick=""> Change Text Color</button>
+</section>
 </body>
 </html>
