@@ -1,8 +1,25 @@
 body{
     background-color: seagreen;
+    text-align: center;
 }
  
-section{
+input{
+    height: 30px;
+}
+.main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
     
-    padding: 30px;
+}
+button{
+    background-color: brown;
+    margin:40px;
+    padding: 10px;
+    font-size: 20px;
 }
