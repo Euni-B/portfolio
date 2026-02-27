@@ -1,0 +1,34 @@
+ul{
+    padding-left: 20px;
+    animation: fadeIn 2s ease-in;
+}
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+.card {
+  background: plum;
+  padding: 20px;
+  width: 300px;
+  margin: 50px auto;
+  border-radius: 10px;
+
+  /* Shadow effect */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+

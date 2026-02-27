@@ -17,5 +17,16 @@ function changeText(){
     document.getElementById("change-text").style.color="red";
 }
 
+function addTask() {
+  const input= document.getElementById("task");
+  const taskText = input.value.trim();
 
+  if(taskText === "") return;
+
+  const li = document.createElement("li");
+  li.textContent = taskText;
+
+  document.getElementById("taskList").appendChild(li);
+  input.value = "";
+}
 
