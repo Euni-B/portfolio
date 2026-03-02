@@ -1,15 +1,16 @@
-ul{
-    padding-left: 20px;
-    animation: fadeIn 2s ease-in;
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  animation: fadeSlide 1s ease-out forwards;
 }
-@keyframes fadeIn{
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
+
 
 
 

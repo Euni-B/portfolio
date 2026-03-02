@@ -1,32 +1,21 @@
-console.log("js connected")
-
-function loginHandler(){
-
- const nameInput= document.getElementById("name-input");
-const emailInput=document.getElementById("email-input");
- console.log("Your name is" + nameInput.value);
- console.log( "Your email is" + emailInput.value );
-}
-
-
-const changeText=document.getElementById("change-text") 
-function changeText(){
-    document.getElementById("change-text").textContent = "Bye!";
-}
-function changeText(){
-    document.getElementById("change-text").style.color="red";
-}
-
 function addTask() {
-  const input= document.getElementById("task");
-  const taskText = input.value.trim();
+  const taskInput = document.getElementById("task");
+  const taskList = document.getElementById("taskList");
 
-  if(taskText === "") return;
+  const newTask = document.createElement("li");
+  newTask.textContent = taskInput.value;
 
-  const li = document.createElement("li");
-  li.textContent = taskText;
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
 
-  document.getElementById("taskList").appendChild(li);
-  input.value = "";
+  // cleaner version
+  deleteBtn.addEventListener("click", function () {
+    newTask.remove();
+  });
+newTask.classList.add("fade-in");
+  newTask.appendChild(deleteBtn);
+  taskList.appendChild(newTask);
+
+  taskInput.value = "";
 }
 
