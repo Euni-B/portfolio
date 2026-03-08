@@ -1,5 +1,5 @@
-let color = purple;
-color = document.getElementById("colorInput").value;
+
+
 
 
 
@@ -9,6 +9,6 @@ function sayHello() {
 }
 
 function showColor() {
-    console.log("color");
+   const color = document.getElementById("colorInput").value;
     alert("Your favorite color is " + color);
 }
