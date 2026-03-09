@@ -1,5 +1,6 @@
-
-
+let favColor = "purple";
+favColor = "lavendar"
+console.log(favColor);
 
 
 
