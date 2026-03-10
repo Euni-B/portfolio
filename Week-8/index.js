@@ -18,6 +18,8 @@ function spinText() {
 
   text.classList.add("spin");
 
+  text.textContent = "You clicked the button!";
+
   setTimeout(function () {
     text.classList.remove("spin");
   }, 1000);
