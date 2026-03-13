@@ -27,3 +27,14 @@ label {
     color: white;
     border-radius: 20px;
 }
+
+.option {
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.option input:checked + span {
+  color: blue;
+}

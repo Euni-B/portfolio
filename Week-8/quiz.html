@@ -14,9 +14,9 @@
   <section>
 
     <div>
-      <h3>Online Quiz</h3>
-      <h4>Score: 1</h4>
-      <h6>You got 2 out of 5</h6>
+      <h1>Online Quiz</h1>
+      <h2 id="score">Score: 0</h2>
+      <h6 id="result"> </h6>
     </div>
     <!-- card 1 -->
     <div class="card">
@@ -25,16 +25,16 @@
 
       <p>What tag creates a heading?</p>
 
-      <label>
-        <input type="radio" name="quiz"> h1
+      <label  class="option">
+        <input type="radio" name="quiz-1" value="h1"> h1
       </label>
 
-      <label>
-        <input type="radio" name="quiz"> pa
+      <label  class="option">
+        <input type="radio" name="quiz-1" value="p"> p
       </label>
 
-      <label>
-        <input type="radio" name="quiz"> div
+      <label  class="option">
+        <input type="radio" name="quiz-1" value="div"> div
       </label>
 
     </div>
@@ -46,15 +46,15 @@
 
       <p>What is 2 + 2?</p>
 
-      <label>
+      <label  class="option">
         <input type="radio" name="quiz-2"> 2
       </label>
 
-      <label>
+      <label  class="option">
         <input type="radio" name="quiz-2"> 4
       </label>
 
-      <label>
+      <label  class="option">
         <input type="radio" name="quiz-2"> 6
       </label>
 
@@ -67,15 +67,15 @@
 
       <p>What is 4 - 2 ?</p>
 
-      <label>
+      <label  class="option">
         <input type="radio" name="quiz-3"> 6
       </label>
 
-      <label>
+      <label  class="option">
         <input type="radio" name="quiz-3"> 8
       </label>
 
-      <label>
+      <label  class="option">
         <input type="radio" name="quiz-3"> 2
       </label>
 
@@ -88,15 +88,15 @@
 
       <p>What color is grass?</p>
 
-      <label>
+      <label  class="option">
         <input type="radio" name="quiz-4"> lavendar
       </label>
 
-      <label>
+      <label class="option" >
         <input type="radio" name="quiz-4"> green
       </label>
 
-      <label>
+      <label  class="option">
         <input type="radio" name="quiz-4"> blue
       </label>
 
@@ -110,21 +110,21 @@
 
       <p>What is 6+2? </p>
 
-      <label>
+      <label  class="option">
         <input type="radio" name="quiz-5"> 8
       </label>
 
-      <label>
+      <label  class="option">
         <input type="radio" name="quiz-5"> 21
       </label>
 
-      <label>
+      <label  class="option">
         <input type="radio" name="quiz-5"> 1
       </label>
 
     </div>
 
-    <button class="submit-btn">Submit Quiz</button>
+    <button class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
   </section>
 
 
