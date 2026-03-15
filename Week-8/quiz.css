@@ -35,6 +35,7 @@ label {
   cursor: pointer;
 }
 
-.option input:checked + span {
+.option:has(input:checked) {
   color: blue;
+  font-weight: bold;
 }
