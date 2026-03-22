@@ -17,11 +17,11 @@
   align-items: center;
   justify-content: space-between;
 
-  width: 300px;
+  width: 360px;
   padding: 10px;
   margin: 8px 0;
 
-  border: 1px solid #ccc;
+  border: 1px solid #4a90e2;
   border-radius: 6px;
 
   background-color: white;
@@ -31,7 +31,57 @@
   flex: 1;
 }
 
+
 .completed {
   text-decoration: line-through;
   color: gray;
+}
+
+.task button {
+  background-color: #357abd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.task button:hover {
+  background-color: deepskyblue;
+}
+/* task input styling  */
+#taskInput {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  border: 1px solid #4a90e2;
+  border-radius: 6px;
+
+  box-sizing: border-box;
+}
+
+/* light blue outline when clicked */
+#taskInput:focus {
+  outline: none;
+  border: 1px solid #4a90e2;
+}
+
+/* addtask button  */
+#addTskBtn {
+  background-color: #357abd;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 10px;
+  
+
+  cursor: pointer;
+}
+
+/* hover effect */
+#addTskBtn:hover {
+  background-color: deepskyblue;
 }
