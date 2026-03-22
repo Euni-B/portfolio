@@ -12,7 +12,7 @@ if (username) {
 
 // task list 
 
-  function addTask() {
+function addTask() {
     const input = document.getElementById("taskInput");
     const taskText = input.value.trim();
 
@@ -33,6 +33,7 @@ if (username) {
     completeBtn.textContent = "Complete";
     completeBtn.onclick = function () {
         span.classList.toggle("completed");
+        updateTaskCount();
     };
 
     // delete button
@@ -40,6 +41,7 @@ if (username) {
     deleteBtn.textContent = "Delete";
     deleteBtn.onclick = function () {
         taskDiv.remove();
+        updateTaskCount();
     };
 
     // assemble task
@@ -50,7 +52,27 @@ if (username) {
     // add to page
     container.appendChild(taskDiv);
 
-      // clear input
+    // clear input
     input.value = "";
-    
+
+    // add task count 
+    container.appendChild(taskDiv);
+    updateTaskCount();
+}
+
+function updateTaskCount() {
+    const tasks = document.querySelectorAll("#taskContainer .task");
+    let count = 0;
+
+    tasks.forEach(task => {
+        const text = task.querySelector("span");
+
+        if (!text.classList.contains("completed")) {
+            count++;
+        }
+    });
+
+    document.getElementById("taskTitle").textContent = "Tasks: " + count;
+
+
 }

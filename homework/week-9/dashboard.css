@@ -1,4 +1,4 @@
-
+/* body design  */
 .card {
   background-color: white;
   width: 500px;
@@ -11,7 +11,7 @@
   text-align: left;
 }
 
-/* task list  */
+/* task input  */
 .task {
   display: flex;
   align-items: center;
@@ -31,12 +31,13 @@
   flex: 1;
 }
 
-
+/* complete button styling  */
 .completed {
   text-decoration: line-through;
   color: gray;
 }
 
+/* delete button styling  */
 .task button {
   background-color: #357abd;
   color: white;
