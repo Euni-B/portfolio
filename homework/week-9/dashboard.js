@@ -34,6 +34,7 @@ function addTask() {
     completeBtn.onclick = function () {
         span.classList.toggle("completed");
         updateTaskCount();
+        // saveTasks();
     };
 
     // delete button
@@ -42,6 +43,7 @@ function addTask() {
     deleteBtn.onclick = function () {
         taskDiv.remove();
         updateTaskCount();
+        // saveTasks();
     };
 
     // assemble task
@@ -58,8 +60,10 @@ function addTask() {
     // add task count 
     container.appendChild(taskDiv);
     updateTaskCount();
+    // saveTasks();
 }
 
+// task track function 
 function updateTaskCount() {
     const tasks = document.querySelectorAll("#taskContainer .task");
     let count = 0;
@@ -75,4 +79,79 @@ function updateTaskCount() {
     document.getElementById("taskTitle").textContent = "Tasks: " + count;
 
 
+}
+
+// save list after page refresh,not functioning, work on later 
+
+// function saveTasks() {
+//     const tasks = [];
+//     const taskElements = document.querySelectorAll("#taskContainer .task");
+
+//     taskElements.forEach(task => {
+//         const text = task.querySelector("span").textContent;
+//         const completed = task.querySelector("span").classList.contains("completed");
+
+//         tasks.push({ text, completed });
+//     });
+
+//     localStorage.setItem("tasks", JSON.stringify(tasks));
+// }
+
+
+// window.onload = function () {
+//     const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+//     savedTasks.forEach(task => {
+//         createTask(task.text, task.completed);
+//     });
+
+//     updateTaskCount();
+// };
+
+// logout function 
+document.getElementById("logoutBtn").onclick = function () {
+    window.location.href = "index.html";
+};
+
+// quiz answer checker 
+let score = 0;
+
+function checkAnswer(button, isCorrect) {
+
+    // find the question container
+    const questionDiv = button.parentElement;
+
+    // get all buttons in this question
+    const buttons = questionDiv.querySelectorAll("button");
+
+    // disable all buttons
+    buttons.forEach(btn => {
+        btn.disabled = true;
+    });
+
+    // update score
+    if (isCorrect) {
+        score++;
+    }
+
+    document.getElementById("score").textContent = "Score: " + score;
+}
+
+// submit button function 
+function resetQuiz() {
+    // reset score
+    score = 0;
+    document.getElementById("score").textContent = "Score: 0";
+
+    // get all questions
+    const questions = document.querySelectorAll(".question");
+
+    questions.forEach(question => {
+        const buttons = question.querySelectorAll("button");
+
+        buttons.forEach(btn => {
+            btn.disabled = false;          // enable buttons again
+            btn.style.backgroundColor = ""; // remove color (reset)
+        });
+    });
 }
