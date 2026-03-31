@@ -15,3 +15,5 @@ What I struggled with:
 What I did on my own:
 -built the boilerplate with a checkup afterwards for accuracy
 -wrote the basic html framework
+-wrote the css code for body and card setup
+-built the milliseconds const and variable

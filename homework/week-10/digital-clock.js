@@ -12,6 +12,7 @@ function updateClock() {
   let hours = now.getHours();
   const minutes = now.getMinutes();
   const seconds = now.getSeconds();
+  const milliseconds = now.getMilliseconds();
 
   let amPm = '';
   if (!is24Hour) {
@@ -23,7 +24,8 @@ function updateClock() {
   const formattedTime =
     `${hours.toString().padStart(2,'0')}${colon}` +
     `${minutes.toString().padStart(2,'0')}${colon}` +
-    `${seconds.toString().padStart(2,'0')}` + amPm;
+    `${seconds.toString().padStart(2,'0')}${colon}` +
+    `${milliseconds.toString().padStart(3,'0')}` + amPm;
 
   timeEl.textContent = formattedTime;
 
